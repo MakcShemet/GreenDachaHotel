@@ -68,14 +68,14 @@ h6 {
 
 .fixed {
   background-color: #fff;
-  border-bottom: 1px solid #4b4b4b;
+  border-bottom: 2px solid #e5e5e5;
   z-index: 100;
 }
 .fixed .nav__menu_link, .fixed .header__contacts_phone {
   color: rgb(75, 75, 75) !important;
 }
 .fixed .header__contacts {
-  border-left: 1px solid #4b4b4b;
+  border-left: 1px solid #c0c0c0;
 }
 
 .logo {
