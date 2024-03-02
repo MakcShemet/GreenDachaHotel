@@ -71,7 +71,7 @@ let galleryRoomOneImageIndex = roomStandartOne[0].id;
 galleryRoomOneImage.src = roomStandartOne[galleryRoomOneImageIndex - 1].src;
 galleryRoomOneImage.alt = roomStandartOne[galleryRoomOneImageIndex - 1].alt;
 
-galleryRoomOne.appendChild(galleryRoomOneImage);
+galleryRoomOne.prepend(galleryRoomOneImage);
 
 galleryRoomOneArrows.addEventListener('click', (e) => {
     if (e.target === oneRoomNext) {
@@ -95,7 +95,7 @@ let galleryRoomTwoImageIndex = roomStandartTwo[0].id;
 galleryRoomTwoImage.src = roomStandartTwo[galleryRoomTwoImageIndex - 1].src;
 galleryRoomTwoImage.alt = roomStandartTwo[galleryRoomTwoImageIndex - 1].alt;
 
-galleryRoomTwo.appendChild(galleryRoomTwoImage);
+galleryRoomTwo.prepend(galleryRoomTwoImage);
 
 galleryRoomTwoArrows.addEventListener('click', (e) => {
     if (e.target === twoRoomNext) {
@@ -108,6 +108,4 @@ galleryRoomTwoArrows.addEventListener('click', (e) => {
         galleryRoomTwoImage.src = roomStandartTwo[galleryRoomTwoImageIndex - 1].src;
         galleryRoomTwoImage.alt = roomStandartTwo[galleryRoomTwoImageIndex - 1].alt;
     }
-
-
 });
