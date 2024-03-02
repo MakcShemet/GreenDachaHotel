@@ -42,11 +42,6 @@ const galleryRoomsOne = `[
         "id": 7,
         "src": "images/standart-room/standart_7.jpg",
         "alt": "standart 7"
-    },
-    {
-        "id": 8,
-        "src": "images/standart-room/standart_8.jpg",
-        "alt": "standart 8"
     }
 ]`
 
@@ -85,10 +80,5 @@ const galleryRoomsTwo = `[
         "id": 7,
         "src": "images/rooms_2_standart/2rooms-st_7.jpg",
         "alt": "standart 7"
-    },
-    {
-        "id": 8,
-        "src": "images/rooms_2_standart/2rooms-st_8.jpg",
-        "alt": "standart 8"
     }
 ]`

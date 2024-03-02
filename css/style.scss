@@ -170,9 +170,12 @@ h6 {
     }
     &_images {
       max-width: 840px;
+      max-height: 400px;
       position: relative;
+      overflow: hidden;
       & img {
-        width: 100%;
+        max-width: 100%;
+        width: auto;
       }
     }
     &_square {

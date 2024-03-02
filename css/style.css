@@ -174,10 +174,13 @@ h6 {
 }
 .room__content_images {
   max-width: 840px;
+  max-height: 400px;
   position: relative;
+  overflow: hidden;
 }
 .room__content_images img {
-  width: 100%;
+  max-width: 100%;
+  width: auto;
 }
 .room__content_square {
   font-size: 16px;
