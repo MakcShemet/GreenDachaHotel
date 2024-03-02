@@ -86,7 +86,7 @@ h6 {
 }
 
 .logo img {
-  max-width: 120px;
+  max-width: 100%;
 }
 
 .nav__menu {
@@ -102,6 +102,7 @@ h6 {
   text-decoration: none;
   text-transform: uppercase;
   color: #fff;
+  font-weight: 400;
 }
 
 .social {
@@ -173,12 +174,13 @@ h6 {
 }
 .room__content_images {
   max-width: 840px;
+  position: relative;
 }
 .room__content_images img {
   width: 100%;
 }
 .room__content_square {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 400;
 }
 .room__content_desc {
@@ -200,6 +202,36 @@ h6 {
 }
 .room__capacity {
   font-size: 16px;
+}
+.room__gallery-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 70px;
+  position: absolute;
+  right: 4%;
+  bottom: 6%;
+}
+.room__gallery_arrow {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.prev {
+  background-image: url("../images/icons/left-arrow-min.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.next {
+  background-image: url("../images/icons/right-arrow-min.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .inclusive {
@@ -317,7 +349,7 @@ td {
   text-align: center;
   color: #fff;
   position: relative;
-  padding-top: 550px;
+  padding-top: 520px;
   padding-bottom: 112px;
   margin-top: -470px;
 }
@@ -329,11 +361,11 @@ td {
   padding: 18px;
   gap: 32px;
   max-width: 172px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .advantages_desc img {
-  width: 98px;
-  height: 98px;
+  width: 70px;
+  height: 70px;
 }
 
 /* Footer */
@@ -377,7 +409,7 @@ td {
   height: 70px;
   position: fixed;
   bottom: 120px;
-  right: 104px;
+  right: 48px;
   background-color: rgba(196, 196, 196, 0.537254902);
   border-radius: 60%;
   cursor: pointer;
@@ -419,7 +451,7 @@ td {
     height: 190px;
   }
   .advantages {
-    padding-top: 350px;
+    padding-top: 320px;
     margin-top: -350px;
   }
 }/*# sourceMappingURL=style.css.map */

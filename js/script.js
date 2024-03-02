@@ -1,4 +1,4 @@
-﻿const dataElement = JSON.parse(temporary);
+﻿const dataElement = JSON.parse(logo);
 
 const navbar = document.querySelector('.navbar');
 const logoDiv = document.querySelector('.logo');
@@ -55,3 +55,59 @@ const btnUp = {
 }
 
 btnUp.addEventListener();
+
+const roomStandartOne = JSON.parse(galleryRoomsOne);
+const roomStandartTwo = JSON.parse(galleryRoomsTwo);
+
+const galleryRoomOne = document.querySelector('.one-room');
+const galleryRoomTwo = document.querySelector('.two-rooms');
+
+const galleryRoomOneArrows = galleryRoomOne.querySelector('.room__gallery-arrows');
+const oneRoomPrev = galleryRoomOne.querySelector('.prev');
+const oneRoomNext = galleryRoomOne.querySelector('.next');
+
+const galleryRoomOneImage = document.createElement('img');
+let galleryRoomOneImageIndex = roomStandartOne[0].id;
+galleryRoomOneImage.src = roomStandartOne[galleryRoomOneImageIndex - 1].src;
+galleryRoomOneImage.alt = roomStandartOne[galleryRoomOneImageIndex - 1].alt;
+
+galleryRoomOne.appendChild(galleryRoomOneImage);
+
+galleryRoomOneArrows.addEventListener('click', (e) => {
+    if (e.target === oneRoomNext) {
+        galleryRoomOneImageIndex++;
+        galleryRoomOneImage.src = roomStandartOne[galleryRoomOneImageIndex - 1].src;
+        galleryRoomOneImage.alt = roomStandartOne[galleryRoomOneImageIndex - 1].alt;
+    }
+    if (e.target === oneRoomPrev) {
+        galleryRoomOneImageIndex--;
+        galleryRoomOneImage.src = roomStandartOne[galleryRoomOneImageIndex - 1].src;
+        galleryRoomOneImage.alt = roomStandartOne[galleryRoomOneImageIndex - 1].alt;
+    }
+});
+
+const galleryRoomTwoArrows = galleryRoomTwo.querySelector('.room__gallery-arrows');
+const twoRoomPrev = galleryRoomTwo.querySelector('.prev');
+const twoRoomNext = galleryRoomTwo.querySelector('.next');
+
+const galleryRoomTwoImage = document.createElement('img');
+let galleryRoomTwoImageIndex = roomStandartTwo[0].id;
+galleryRoomTwoImage.src = roomStandartTwo[galleryRoomTwoImageIndex - 1].src;
+galleryRoomTwoImage.alt = roomStandartTwo[galleryRoomTwoImageIndex - 1].alt;
+
+galleryRoomTwo.appendChild(galleryRoomTwoImage);
+
+galleryRoomTwoArrows.addEventListener('click', (e) => {
+    if (e.target === twoRoomNext) {
+        galleryRoomTwoImageIndex++;
+        galleryRoomTwoImage.src = roomStandartTwo[galleryRoomTwoImageIndex - 1].src;
+        galleryRoomTwoImage.alt = roomStandartTwo[galleryRoomTwoImageIndex - 1].alt;
+    }
+    if (e.target === twoRoomPrev) {
+        galleryRoomTwoImageIndex--;
+        galleryRoomTwoImage.src = roomStandartTwo[galleryRoomTwoImageIndex - 1].src;
+        galleryRoomTwoImage.alt = roomStandartTwo[galleryRoomTwoImageIndex - 1].alt;
+    }
+
+
+});
