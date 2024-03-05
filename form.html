@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма бронирования номеров. Отель Грин Дача. Анапа</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form action="" class="form_booking center" name="form-booking">
+      <div class="dates">
+        <label for="date-in"
+          >Дата заезда
+          <input type="date" id="date-in" required />
+        </label>
+        <label for="date-out"
+          >Дата выезда
+          <input type="date" id="date-out" required />
+        </label>
+      </div>
+      <div class="field-group">
+        <div class="quantity-people">
+          <label for="type-room">
+            Выбрать номер
+            <select name="type-room" id="type-room" class="type-room">
+              <option value="1-комнатный стандарт">
+                Однокомнатный стандарт
+              </option>
+              <option value="2-комнатный стандарт">
+                Двухкомнатный стандарт
+              </option>
+            </select>
+          </label>
+          <select id="quantity-adult">
+            <option value="1 Взрослый">1 Взрослый</option>
+            <option value="2 Взрослых" selected>2 Взрослых</option>
+            <option value="3 Взрослых">3 Взрослых</option>
+          </select>
+          <select id="quantity-children">
+            <option value="">Без детей</option>
+            <option value="1 ребенок до 4-х лет" selected>
+              Ребенок до 4-х лет
+            </option>
+            <option value="1 ребенок от 4-х до 18 лет">
+              Ребенок от 4-х до 18 лет
+            </option>
+          </select>
+        </div>
+        <div class="user-data">
+          <input type="text" name="name" placeholder="Имя" required />
+          <input type="phone" nane="phone" placeholder="Телефон" required />
+          <input type="mail" name="mail" placeholder="E-mail" required />
+          <textarea
+            name="coments"
+            id="coments"
+            cols="50"
+            rows="8"
+            placeholder="Коментарий"
+          ></textarea>
+          <label for="accept" id="check">
+            <input type="checkbox" name="accept" id="accept" />Согласен на
+            обработку моих персональных данных</label
+          >
+          <button type="submit" class="submit-btn">Отправить заявку</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
