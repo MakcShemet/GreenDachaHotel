@@ -37,6 +37,15 @@ h6 {
   font-weight: 300;
 }
 
+ul {
+  list-style-type: none;
+  margin-bottom: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
 .center {
   padding-left: calc(50% - 850px);
   padding-right: calc(50% - 850px);
@@ -274,6 +283,7 @@ h6 {
 .price__table {
   width: 100%;
   color: #4b4b4b;
+  font-weight: 400;
   border-collapse: collapse;
 }
 
@@ -316,7 +326,7 @@ td {
 }
 .about__title {
   margin-top: 0;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 .about__image {
   width: 50%;
