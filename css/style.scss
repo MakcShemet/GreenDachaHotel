@@ -22,6 +22,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   position: relative;
+  scrollbar-gutter: stable;
 }
 
 h1,
@@ -34,18 +35,21 @@ h6 {
   font-weight: 300;
 }
 
-ul {
-  list-style-type: none;
-  margin-bottom: 16px;
-}
-
-p {
-  margin-bottom: 16px;
-}
-
 .center {
   padding-left: calc(50% - 1700px / 2);
   padding-right: calc(50% - 1700px / 2);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 12px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
 }
 
 .flex-row {
@@ -147,6 +151,8 @@ p {
     background-color: #06483a;
     color: #fff;
     padding: 28px 24px;
+    border: none;
+    cursor: pointer;
   }
 }
 
@@ -193,13 +199,13 @@ p {
       }
     }
     &_square {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
     }
     &_desc {
       color: $mainGray;
-      font-size: 16px;
-      line-height: 30px;
+      font-size: 14px;
+      line-height: 20px;
     }
     &_price {
       display: flex;
@@ -212,7 +218,7 @@ p {
     }
   }
   &__name {
-    font-size: 40px;
+    font-size: 32px;
   }
   &__capacity {
     font-size: 16px;
@@ -305,6 +311,7 @@ td {
     padding: 12px 32px;
     border-radius: 38px;
     border: none;
+    cursor: pointer;
   }
   &_line {
     position: absolute;
@@ -323,6 +330,11 @@ td {
       font-size: 16px;
       margin-left: 64px;
       margin-right: 24px;
+      margin-bottom: 12px;
+    }
+    & ul {
+      list-style-type: none;
+      margin-bottom: 16px;
     }
   }
   &__title {
@@ -394,15 +406,26 @@ form {
   padding: 32px;
 }
 
+.form__title {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: $mainGreen;
+}
+
 label:not(#check) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: $mainGreen;
 }
 
 input:not([type="checkbox"]),
 select,
+select .option,
 textarea {
   width: 353px;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
@@ -462,11 +485,54 @@ select:focus {
   border-radius: 20px;
 }
 
+dialog {
+  position: fixed;
+  height: 100%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+.closeDialogBtn {
+  margin: 1% 0 0 auto;
+  border: 2px solid transparent;
+  min-width: 110px;
+  border-radius: 20px;
+  padding: 9px 15px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: $mainGreen;
+  transition: background-color 0.2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dialog__wrapper {
+  padding: 1em;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
 /* Footer */
 .footer {
   padding-top: 32px;
   padding-bottom: 32px;
-  // border-top: 1px solid #4b4b4b;
   &__contacts {
     display: flex;
     flex-direction: column;

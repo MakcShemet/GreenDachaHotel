@@ -25,6 +25,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   position: relative;
+  scrollbar-gutter: stable;
 }
 
 h1,
@@ -37,18 +38,21 @@ h6 {
   font-weight: 300;
 }
 
-ul {
-  list-style-type: none;
-  margin-bottom: 16px;
-}
-
-p {
-  margin-bottom: 16px;
-}
-
 .center {
   padding-left: calc(50% - 850px);
   padding-right: calc(50% - 850px);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 12px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
 }
 
 .flex-row {
@@ -150,6 +154,8 @@ p {
   background-color: #06483a;
   color: #fff;
   padding: 28px 24px;
+  border: none;
+  cursor: pointer;
 }
 
 .slider {
@@ -197,13 +203,13 @@ p {
   width: auto;
 }
 .room__content_square {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 }
 .room__content_desc {
   color: #4b4b4b;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 20px;
 }
 .room__content_price {
   display: flex;
@@ -215,7 +221,7 @@ p {
   text-align: center;
 }
 .room__name {
-  font-size: 40px;
+  font-size: 32px;
 }
 .room__capacity {
   font-size: 16px;
@@ -306,6 +312,7 @@ td {
   padding: 12px 32px;
   border-radius: 38px;
   border: none;
+  cursor: pointer;
 }
 .rooms__btn_line {
   position: absolute;
@@ -323,6 +330,11 @@ td {
   font-size: 16px;
   margin-left: 64px;
   margin-right: 24px;
+  margin-bottom: 12px;
+}
+.about__text ul {
+  list-style-type: none;
+  margin-bottom: 16px;
 }
 .about__title {
   margin-top: 0;
@@ -392,15 +404,26 @@ form {
   padding: 32px;
 }
 
+.form__title {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: #06483a;
+}
+
 label:not(#check) {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #06483a;
 }
 
 input:not([type=checkbox]),
 select,
+select .option,
 textarea {
   width: 353px;
   box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -457,6 +480,50 @@ select:focus {
   text-transform: uppercase;
   width: 100%;
   border-radius: 20px;
+}
+
+dialog {
+  position: fixed;
+  height: 100%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+}
+
+.closeDialogBtn {
+  margin: 1% 0 0 auto;
+  border: 2px solid transparent;
+  min-width: 110px;
+  border-radius: 20px;
+  padding: 9px 15px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: inherit;
+  background-color: #06483a;
+  transition: background-color 0.2s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dialog__wrapper {
+  padding: 1em;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.scroll-lock {
+  overflow: hidden;
 }
 
 /* Footer */

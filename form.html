@@ -7,63 +7,85 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <form action="" class="form_booking center" name="form-booking">
-      <div class="dates">
-        <label for="date-in"
-          >Дата заезда
-          <input type="date" id="date-in" required />
-        </label>
-        <label for="date-out"
-          >Дата выезда
-          <input type="date" id="date-out" required />
-        </label>
+    <dialog class="child" id="myDialog">
+      <div class="dialog__wrapper">
+        <button class="closeDialogBtn button-black" type="button">
+          Х Закрыть
+        </button>
+        <form action="" class="form_booking center" name="form-booking">
+          <h2 class="form__title text-center mb-2">Бронирование номера</h2>
+          <div class="dates">
+            <label for="date-in"
+              >Дата заезда
+              <input type="date" id="date-in" required />
+            </label>
+            <label for="date-out"
+              >Дата выезда
+              <input type="date" id="date-out" required />
+            </label>
+          </div>
+          <div class="field-group">
+            <div class="quantity-people">
+              <label for="type-room">
+                Выбрать номер
+                <select name="type-room" id="type-room" class="type-room">
+                  <option class="option" value="1-комнатный стандарт">
+                    Однокомнатный стандарт
+                  </option>
+                  <option class="option" value="2-комнатный стандарт">
+                    Двухкомнатный стандарт
+                  </option>
+                </select>
+              </label>
+              <label for="quantity-adult"
+                >Количество взрослых
+                <input type="number" max="5" min="1" placeholder="2" required />
+              </label>
+              <label
+                >Дети до 4-х лет
+                <input type="number" max="4" min="0" placeholder="0" />
+              </label>
+              <label
+                >Дети от 4-х до 18 лет
+                <input type="number" max="4" min="0" placeholder="0" />
+              </label>
+            </div>
+            <div class="user-data">
+              <input
+                type="text"
+                name="name"
+                maxlength="20"
+                placeholder="Имя"
+                required
+              />
+              <input
+                type="tel"
+                nane="phone"
+                placeholder="Телефон +79990000000"
+                pattern="[+]{1}[7]{1}[0-9]{11}"
+                required
+              />
+              <input type="email" name="email" placeholder="E-mail" required />
+              <textarea
+                name="coments"
+                id="coments"
+                cols="50"
+                rows="8"
+                placeholder="Коментарий"
+              ></textarea>
+              <label for="accept" id="check">
+                <input
+                  type="checkbox"
+                  name="accept"
+                  id="accept"
+                  required
+                />Согласен на обработку моих персональных данных</label
+              >
+              <button type="submit" class="submit-btn">Отправить заявку</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="field-group">
-        <div class="quantity-people">
-          <label for="type-room">
-            Выбрать номер
-            <select name="type-room" id="type-room" class="type-room">
-              <option value="1-комнатный стандарт">
-                Однокомнатный стандарт
-              </option>
-              <option value="2-комнатный стандарт">
-                Двухкомнатный стандарт
-              </option>
-            </select>
-          </label>
-          <select id="quantity-adult">
-            <option value="1 Взрослый">1 Взрослый</option>
-            <option value="2 Взрослых" selected>2 Взрослых</option>
-            <option value="3 Взрослых">3 Взрослых</option>
-          </select>
-          <select id="quantity-children">
-            <option value="">Без детей</option>
-            <option value="1 ребенок до 4-х лет" selected>
-              Ребенок до 4-х лет
-            </option>
-            <option value="1 ребенок от 4-х до 18 лет">
-              Ребенок от 4-х до 18 лет
-            </option>
-          </select>
-        </div>
-        <div class="user-data">
-          <input type="text" name="name" placeholder="Имя" required />
-          <input type="phone" nane="phone" placeholder="Телефон" required />
-          <input type="mail" name="mail" placeholder="E-mail" required />
-          <textarea
-            name="coments"
-            id="coments"
-            cols="50"
-            rows="8"
-            placeholder="Коментарий"
-          ></textarea>
-          <label for="accept" id="check">
-            <input type="checkbox" name="accept" id="accept" />Согласен на
-            обработку моих персональных данных</label
-          >
-          <button type="submit" class="submit-btn">Отправить заявку</button>
-        </div>
-      </div>
-    </form>
+    </dialog>
   </body>
 </html>
