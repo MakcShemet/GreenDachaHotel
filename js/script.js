@@ -111,7 +111,7 @@ galleryRoomTwoArrows.addEventListener('click', (e) => {
 });
 
 /* Modal window */
-const dialog = document.getElementById('myDialog')
+const dialog = document.getElementById('bookingForm')
 const dialogOpener = document.querySelectorAll('.booking')
 const dialogCloser = document.querySelector('.closeDialogBtn')
 
