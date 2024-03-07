@@ -141,7 +141,7 @@ dialog.addEventListener('click', closeOnBackDropClick)
 dialogOpener.forEach((buttonOpener) => {
     buttonOpener.addEventListener('click', openModalAndLockScroll)
 })
-dialogCloser.addEventListener('click', (event) => {
-    event.stopPropagation()
+dialogCloser.addEventListener('click', (e) => {
+    e.stopPropagation()
     close()
 })
